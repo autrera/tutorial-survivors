@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://daro2cvyibfdi"]
+
+[ext_resource type="PackedScene" uid="uid://g1kg6i5rcube" path="res://player.tscn" id="1_3cish"]
+
+[node name="Game" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1934.0
+offset_bottom = 1096.0
+
+[node name="Player" parent="." instance=ExtResource("1_3cish")]
+position = Vector2(952, 561)
