@@ -48,6 +48,7 @@ shape = SubResource("CircleShape2D_i3pqv")
 debug_color = Color(0.928208, 0.228995, 0.36084, 0.42)
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
 offset_left = -104.0
 offset_top = -149.0
 offset_right = 105.0
