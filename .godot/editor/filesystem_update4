@@ -4,3 +4,4 @@ res://survivors_game.tscn
 res://mob.tscn
 res://gun.tscn
 res://bullet.tscn
+res://survivors_game.gd
