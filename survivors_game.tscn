@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://daro2cvyibfdi"]
+[gd_scene load_steps=6 format=3 uid="uid://daro2cvyibfdi"]
 
 [ext_resource type="PackedScene" uid="uid://g1kg6i5rcube" path="res://player.tscn" id="1_3cish"]
 [ext_resource type="Script" uid="uid://cfdll8abcb06d" path="res://survivors_game.gd" id="1_qqaft"]
 [ext_resource type="PackedScene" uid="uid://c1om26xh66pto" path="res://pine_tree.tscn" id="2_y3pti"]
+[ext_resource type="Script" uid="uid://bdmw2msyqmdrb" path="res://game_over.gd" id="4_qqaft"]
 
 [sub_resource type="Curve2D" id="Curve2D_l26od"]
 _data = {
@@ -63,7 +64,9 @@ autostart = true
 
 [node name="GameOver" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
+process_mode = 2
 visible = false
+script = ExtResource("4_qqaft")
 
 [node name="ColorRect" type="ColorRect" parent="GameOver"]
 anchors_preset = 15
@@ -88,6 +91,22 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 120
 text = "Game Over"
+
+[node name="Label2" type="Label" parent="GameOver/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = 73.0
+offset_right = 256.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Press 'Enter' to restart the Game."
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
